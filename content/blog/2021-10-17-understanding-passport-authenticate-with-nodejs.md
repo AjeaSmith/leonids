@@ -45,8 +45,6 @@ module.exports = function (passport) {
 };
 ```
 
-
-
 **Serialize User:** If the user logs in successfully a session is created, to keep track of that logged-in user. Passport stores the user's id within a cookie(the expiry time is set within the express session portion)
 
 ```javascript
@@ -68,8 +66,6 @@ passport.deserializeUser((id, cb) => {
 	});
 ```
 
-
-
 **Initialize it:** Of course, none of this will matter if you don't initialize it. 
 
 ***Important***: I'm using sessions, therefore I need to use sessions from passport, and express sessions(need to be installed). Then set up express sessions and use it as middleware before the passport sessions. 
@@ -80,7 +76,7 @@ passport.deserializeUser((id, cb) => {
 // this is express session
 app.use(
 	session({
-		secret: 'process.env.SESSION',
+		secret: 'something secure',
 		resave: false,
 		saveUninitialized: false,
 		cookie: {
@@ -88,7 +84,7 @@ app.use(
 		},
 	})
 );
-app.use(cookieParser('process.env.SESSION'));
+app.use(cookieParser('something secure'));
 
 // ----------- Passport Authentication -------------------
 
@@ -98,8 +94,6 @@ app.use(passport.session());
 // brings in our passpoer configuration from our config/passport.js file
 require('./config/passport')(passport);
 ```
-
-
 
 **Middleware**: You can simply use passport as middleware within the route. In my case, the login route. This is were all the magic happens :) if everything goes well, i'll be sending back a success message. 
 
