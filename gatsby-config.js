@@ -1,15 +1,15 @@
 module.exports = {
   pathPrefix: "/leonids",
   siteMetadata: {
-    title: `Leonids`,
+    title: `Dev Log`,
     author: {
-      name: `@ry_zou`,
-      summary: `web dev`,
+      name: `Ajea smith`,
+      summary: `Front-End Developer, side projects are my weakness :) `,
     },
-    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
-    siteUrl: `https://renyuanz.github.io/leonids`,
+    description: `My development log to document my journey as a web developer`,
+    siteUrl: `https://ajeasmith.vercel.app/`,
     social: {
-      twitter: `ry_zou`,
+      twitter: `ajeasmith`,
     },
     defaultImage: "images/bg.jpeg",
   },
