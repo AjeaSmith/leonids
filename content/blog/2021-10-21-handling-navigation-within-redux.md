@@ -2,10 +2,8 @@
 layout: blog
 title: Handling navigation within Redux
 date: 2021-10-21T07:11:50.519Z
-description: "**The problem I was having:** I was trying to redirect a user on a
-  successful register using `history.push` from `react-router-dom`. However,
-  even when the form was submitted with invalid credentials it still redirects.
-  **\\*Ex below\\***"
+description: I was trying to redirect a user on a successful register using
+  `history.push` from `react-router-dom`.
 categories: react-router-dom, redux
 ---
 **The problem I was having:** I was trying to redirect a user on a successful register using `history.push` from `react-router-dom`. However, even when the form was submitted with invalid credentials it still redirects. **\*Ex below\***
